@@ -1,5 +1,5 @@
 import React from 'react';
-import ShopData from "./shopData.js"
+import ShopData from "./shop.data.js";
 import CollectionPreview from "../collection-preview/CollectionPreview.jsx";
 
 class ShopPage extends React.Component {
