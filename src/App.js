@@ -46,7 +46,7 @@ render(){
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/CRWN-clothing/" component={HomePage}/>
+        <Route exact path="/CRWN-clothing/" component={HomePage}/>
         <Route path="/CRWN-clothing/shop" component={ShopPage}/>
         <Route exact path="/CRWN-clothing/checkout" component={CheckoutPage}/>
         <Route exact path="/CRWN-clothing/signin" render={() => this.props.currentUser ? (<Redirect to="/CRWN-clothing/" />) : (<SignInPage/>)}/>
