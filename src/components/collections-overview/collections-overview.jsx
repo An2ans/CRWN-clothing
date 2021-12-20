@@ -16,4 +16,4 @@ const CollectionsOverview = () => {
   );
 }
 
-export default (CollectionsOverview);
+export default CollectionsOverview;

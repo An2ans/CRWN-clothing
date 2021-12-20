@@ -1,11 +1,12 @@
 import React from 'react';
-import {connect} from "react-redux";
+import {useDispatch} from "react-redux";
 import {addItem} from "../../redux/cart/cart.actions.js";
 import {CollectionItemContainer, CollectionFooter, CollectionImage, ItemName, ItemPrice, CollectionButton} from "./collection-item.styles.jsx";
 
 
-const CollectionItem = ({item, addItem}) => {
+const CollectionItem = ({item}) => {
   const {name, price, imageUrl} = item;
+  const dispatch = useDispatch();
 
   return(
 
@@ -16,14 +17,11 @@ const CollectionItem = ({item, addItem}) => {
       <ItemName>{name}</ItemName>
       <ItemPrice>{price}</ItemPrice>
     </CollectionFooter>
-    <CollectionButton onClick={() => addItem(item)} inverted >ADD TO CART</CollectionButton>
+    <CollectionButton onClick={() => dispatch(addItem(item))} inverted >ADD TO CART</CollectionButton>
 
   </CollectionItemContainer>
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item))
-});
 
-export default connect(null, mapDispatchToProps)(CollectionItem);
+export default CollectionItem;
