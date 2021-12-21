@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import './App.css';
+import {GlobalStyle} from "./global.styles.js";
 import {Route, Switch, Redirect} from "react-router-dom";
 import HomePage from "./components/homepage/HomePage.jsx";
 import ShopPage from "./components/shop/ShopPage.jsx";
@@ -24,6 +24,7 @@ const App = () => {
 
   return (
       <div className="App">
+        <GlobalStyle />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage}/>

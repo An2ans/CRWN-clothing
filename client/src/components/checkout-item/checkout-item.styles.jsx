@@ -38,6 +38,10 @@ width: 23%;
 
 export const ItemPrice = styled.span`
 width: 23%;
+@media screen and (max-width: 800px){
+  padding-left: 12px;
+}
+
 `;
 
 export const RemoveButton = styled.div`
